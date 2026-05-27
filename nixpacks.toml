@@ -1,6 +1,6 @@
 [phases.setup]
 # Keeps the default PHP environment and adds Node.js for Vue/Vite
-nixPkgs = ['...', 'nodejs_20']
+nixPkgs = ['...', 'nodejs_22']
 
 [phases.install]
 # Runs the default composer install, then installs Node modules
