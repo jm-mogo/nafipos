@@ -1,1 +1,3 @@
 # nafipos
+
+frist steps
