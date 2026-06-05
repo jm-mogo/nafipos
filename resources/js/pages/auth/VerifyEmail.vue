@@ -4,7 +4,7 @@ import TextLink from '@/components/TextLink.vue';
 import { Button } from '@/components/ui/button';
 import { Spinner } from '@/components/ui/spinner';
 import { logout } from '@/routes';
-import { send } from '@/routes/verification';
+
 
 defineOptions({
     layout: {

@@ -105,7 +105,7 @@ defineProps<{
                 </a>
             </div>
         </div>
-
+<!-- 
         <div class="text-center text-xs text-muted-foreground/80">
             Al continuar, aceptas nuestros
             <a
@@ -119,6 +119,6 @@ defineProps<{
                 class="underline underline-offset-2 hover:text-foreground"
                 >Política de Privacidad</a
             >.
-        </div>
+        </div> -->
     </div>
 </template>

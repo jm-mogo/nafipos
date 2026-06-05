@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('sellers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('ci', 12)->unique()->comment('Cedula unica del vendedor');       // Cédula única
+            $table->string('phone')->nullable()->comment('Teléfono del vendedor');          // Teléfono
+            $table->decimal('commission', 5, 2)->default(0)->comment('porcentaje de comisión');
+            $table->foreignId('companies_id')->constrained('companies')->cascadeOnUpdate()->restrictOnDelete();
+            //un enun por comision de venta o por comision de utilidad
+            $table->enum('commission_type', ['sale', 'utility'])->default('sale');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('sellers');
+    }
+};
